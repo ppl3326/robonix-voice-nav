@@ -1,0 +1,19 @@
+manifestVersion: 1
+package:
+  name: robonix.service.voice_nav
+  version: 0.1.0
+  description: "Voice-driven navigation service for ROSMASTER X3 via Robonix."
+  license: MIT
+  tags: [service, voice, navigation, ros1]
+  maintainers:
+    - Your Name <you@example.com>
+
+# 注意这里加了 scripts/ 路径
+build: bash scripts/build.sh
+start: bash scripts/start.sh
+
+capabilities:
+  - name: "robonix/service/voice_nav"
+    transport: "grpc"
+  - name: "robonix/lifecycle/driver"
+    transport: "grpc"
